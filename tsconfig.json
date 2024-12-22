@@ -1,12 +1,18 @@
-{
-  "compilerOptions": {
+{ "compilerOptions": {
     "target": "ESNext",
     "module": "NodeNext",
     "strict": true,
     "verbatimModuleSyntax": true,
     "skipLibCheck": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+      "~/*": ["./*"]
+    },
     "types": [
-      "node"
+      "node",
+      "jest",
+      "@quramy/jest-prisma-node"
     ],
     "jsx": "react-jsx",
     "jsxImportSource": "hono/jsx",
