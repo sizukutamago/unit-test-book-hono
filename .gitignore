@@ -7,6 +7,8 @@
 .idea/workspace.xml
 .idea/usage.statistics.xml
 .idea/shelf
+dev.db
+dev.db-journal
 
 # deps
 node_modules/
