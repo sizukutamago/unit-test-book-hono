@@ -1,4 +1,4 @@
-import UserFactory from '@/domain/factory/userFactory.js';
+import UserFactory from '@/domain/factory/userFactory';
 
 class UserController {
   private _database = new Database();
