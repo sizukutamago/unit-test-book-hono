@@ -86,4 +86,3 @@ module.exports = {
     'jest/consistent-test-it': ['error', { fn: 'it' }],
   },
 };
-
