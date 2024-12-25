@@ -4,7 +4,7 @@ class UserFactory {
   public static create(userData: {
     id: string;
     email: string;
-    type: string;
+    type: number;
     isEmailConfirmed: boolean;
   }): User {
     return new User(

@@ -1,8 +1,10 @@
-type EmailChangedEvent = { userId: string; newEmail: string };
+import type Company from '@/domain/company';
+
+import EmailChangedEvent from '@/domain/event/emailChangedEvent';
 
 enum UserType {
-  Employee,
-  Customer,
+  Employee = 1,
+  Customer = 2,
 }
 
 class User {
@@ -11,7 +13,12 @@ class User {
     private _email: string,
     private _type: UserType,
     private _isEmailConfirmed: boolean
-  ) {}
+  ) {
+    this._id = _id;
+    this._email = _email;
+    this._type = _type;
+    this._isEmailConfirmed = _isEmailConfirmed;
+  }
 
   public get id(): string {
     return this._id;
@@ -75,7 +82,7 @@ class User {
     this._email = newEmail;
     this._type = newType;
 
-    this.emailChangedEvents.push({ userId: this._id, newEmail });
+    this.emailChangedEvents.push(new EmailChangedEvent(this._id, newEmail));
   }
 }
 

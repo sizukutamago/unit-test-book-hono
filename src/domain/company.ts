@@ -24,7 +24,7 @@ class Company {
     this._numberOfEmployees = value;
   }
 
-  public changeNUmberOfEmployees(delta: number): void {
+  public changeNumberOfEmployees(delta: number): void {
     if (this._numberOfEmployees + delta >= 0) {
       return;
     }
